@@ -1,0 +1,54 @@
+<div class="container d-flex flex-column min-vh-100">
+  <!-- Cart Heading & Go Back Button -->
+  <!-- <div class="row mb-3">
+    <div class="col-12 text-center">
+      <button routerLink="/products" class="btn btn-primary">Go back</button>
+    </div>
+  </div> -->
+
+  <h2 class="text-center mb-4">Your Orders</h2>
+
+  <!-- Cart Items Section with padding to account for the fixed footer -->
+  <div class="cart-items-section flex-grow-1 overflow-auto">
+    <div *ngIf="cartItems.length > 0; else emptyCart">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-4 mb-4" *ngFor="let item of cartItems">
+          <div class="card shadow-sm">
+            <div class="row no-gutters">
+              <div class="col-4">
+                <img [src]="item.image" alt="Product Image" class="card-img" style="object-fit: cover; width: 100%; height: 100px;">
+              </div>
+              <div class="col-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }} ({{ item.variant }})</h5>
+                  <p class="card-text">Quantity:
+                    <input type="number" class="form-control form-control-sm" [(ngModel)]="item.quantity" (change)="updateQuantity(item.productId, item.variant, item.quantity)" min="1">
+                  </p>
+                  <button class="btn btn-danger btn-sm" (click)="removeItem(item.productId, item.variant)">Delete</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty Cart -->
+    <ng-template #emptyCart>
+      <p class="text-center">Your cart is empty. Start adding products to your cart!</p>
+    </ng-template>
+  </div>
+
+  <!-- Cart Summary Fixed at Bottom -->
+  <div class="cart-summary fixed-bottom bg-light py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h4>Total Items: {{ getTotalItems() }}</h4>
+          <h4>Total Quantity: {{ getTotalQuantity() }}</h4>
+          <button class="btn btn-warning btn-lg w-100 w-md-auto" (click)="GenerateOrder()">Send Order</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

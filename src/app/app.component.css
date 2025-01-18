@@ -1,0 +1,13 @@
+/* Global styles for the entire app */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f4f6f8;
+  }
+  
+  .main-content {
+    flex-grow: 1; /* Allow the content to grow and fill available space */
+    padding: 20px;
+  }
+  

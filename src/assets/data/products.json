@@ -1,0 +1,115 @@
+{
+  "products": [
+
+  {
+    "id": 1,
+    "name": "Cooler water pump",
+    "description": "Water cooler pump for cooling systems.",
+    "category": "Diodes",
+    "quantity": 1,
+    "stock": true,
+    "images": [
+      "https://m.media-amazon.com/images/I/712cYeVEhsL.jpg"
+    ],
+    "variants": [
+      { "name": "40W" },
+      { "name": "50W" }
+    ]
+  },
+    {
+      "id": 3,
+      "name": "Capacitor",
+      "description": "Electrolytic capacitors ",
+      "category": "Capacitors",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://m.media-amazon.com/images/I/71NgvayabCL.jpg"
+      ],
+      "variants": [
+        { "name": "100uF 25V" },
+        { "name": "100uF 50V" }
+ 
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Resistor 10k Ohm",
+      "description": "Precision 10k ohm resistor, ",
+      "category": "Resistors",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://www.makestore.in/wp-content/uploads/2019/06/Electrolytic-Capacitor-220uF-35V-1.jpg"
+      ],
+      "variants": [
+        { "name": "0.25W" },
+        { "name": "1W" }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Switch",
+      "description": "Switch button for electrical circuits.",
+      "category": "LEDs",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://5.imimg.com/data5/SELLER/Default/2022/11/OP/GD/ZP/43448572/penite-electric-switch-button.jpg"
+      ],
+      "variants": [
+        { "name": "Anchor 10V" },
+        { "name": "Anchor 20V" }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Transistor 2N2222",
+      "description": "NPN general-purpose transistor, often used for switching and amplification.",
+      "category": "Transistors",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://www.robotsurplus.com/products/2n2222-transistor.jpg",
+        "assets/images/transistor_2N2222.jpg"
+      ],
+      "variants": [
+        { "name": "2N2222 NPN" },
+        { "name": "2N2222A NPN" }
+      ]
+    },
+    {
+      "id": 6,
+      "name": "MOSFET IRF540N",
+      "description": "N-channel MOSFET, commonly used in power supplies and motor control circuits.",
+      "category": "Transistors",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://www.analog.com/media/en/technical-documentation/data-sheets/IRF540N.jpg",
+        "assets/images/mosfet_irf540n.jpg"
+      ],
+      "variants": [
+        { "name": "IRF540N 33A" },
+        { "name": "IRF540N 55A" }
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Potentiometer 10k Ohm",
+      "description": "Rotary potentiometer with a 10k ohm resistance, ideal for volume control or adjustable resistive applications.",
+      "category": "Potentiometers",
+      "quantity": 1,
+      "stock": true,
+      "images": [
+        "https://www.electronicscomp.com/images/Potentiometer-10k.jpg",
+        "assets/images/potentiometer_10k.jpg"
+      ],
+      "variants": [
+        { "name": "10k Ohm Linear" },
+        { "name": "10k Ohm Logarithmic" }
+      ]
+    }
+
+  ]
+}

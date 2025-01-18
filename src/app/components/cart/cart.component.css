@@ -1,0 +1,47 @@
+/* Ensure that the cart summary is positioned correctly */
+.cart-summary {
+  z-index: 1000; /* Ensure it stays above other content */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+}
+
+/* Ensure images are responsive and nicely scaled */
+.card-img {
+  object-fit: cover;
+  height: 100px;
+  width: 100%;
+}
+
+/* Cart item and summary adjustments */
+.cart-items-section {
+  padding-bottom: 100px; /* Ensure enough space for the fixed footer */
+  overflow-y: auto;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.2rem;
+}
+
+.card-text {
+  font-size: 1rem;
+}
+
+/* Mobile padding adjustments */
+@media (max-width: 576px) {
+  .cart-summary h4 {
+    font-size: 1rem;
+  }
+
+  .btn-lg {
+    font-size: 1.2rem;
+    padding: 0.75rem;
+  }
+}
+

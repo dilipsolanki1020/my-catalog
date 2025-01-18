@@ -1,0 +1,22 @@
+<header class="header">
+    <div class="logo-container">
+      <img [src]="logoUrl" alt="Shop Logo" class="logo">
+    </div>
+    <div class="shop-details">
+      <h1 class="shop-name">{{ shopName }}</h1>
+      <p class="shop-address">{{ shopAddress }}</p>
+      <p>Mobile: 7790947641</p>
+      <button *ngIf="router.url === '/products'" (click)="goToCart()" class="cart-button btn btn-success">
+        My Orders
+      </button>
+    
+      <!-- Show "Back" button when URL is not /products -->
+      <button *ngIf="router.url !== '/products'" (click)="goToProducts()" class="cart-button btn btn-primary">
+        &#8592; Back
+      </button>
+    </div>
+    <div class="cart-button-container">
+      <!-- Show "My Orders" button when URL is /products -->
+
+    </div>
+  </header>

@@ -1,0 +1,41 @@
+/* Global styles for header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f9fa; /* Light background */
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-container {
+    flex: 1;
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+  }
+  
+  .shop-details {
+    text-align: center;
+    flex: 2;
+  }
+  
+  .shop-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .shop-address {
+    font-size: 0.9rem;
+    color: #555;
+  }
+  
+  .cart-button{
+    width: 100%;
+  }

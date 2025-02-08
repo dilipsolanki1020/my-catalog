@@ -1,0 +1,59 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col">
+        <label for="username">Username:</label>
+        <input id="username" formControlName="username" />
+        <div *ngIf="reactiveForm.get('username')?.invalid && (reactiveForm.get('username')?.dirty || reactiveForm.get('username')?.touched)">
+          <small *ngIf="reactiveForm.get('username')?.errors?.['required']">Username is required.</small>
+        </div>
+      </div>
+  
+      <div class="col">
+        <label for="email">Email:</label>
+        <input id="email" formControlName="email" />
+        <div *ngIf="reactiveForm.get('email')?.invalid && (reactiveForm.get('email')?.dirty || reactiveForm.get('email')?.touched)">
+          <small *ngIf="reactiveForm.get('email')?.errors?.['required']">Email is required.</small>
+          <small *ngIf="reactiveForm.get('email')?.errors?.['email']">Invalid email format.</small>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col">
+        <label>Access:</label>
+        <div>
+          <label><input type="checkbox" formControlName="readAccess" /> Read Access</label>
+          <label><input type="checkbox" formControlName="writeAccess" /> Write Access</label>
+          <label><input type="checkbox" formControlName="otherAccess1" /> Other Access 1</label>
+          <label><input type="checkbox" formControlName="otherAccess2" /> Other Access 2</label>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Location Selection Section -->
+    <div class="row">
+      <div class="col">
+        <label>Available Locations:</label>
+        <ul>
+          <li *ngFor="let location of availableLocations" 
+              [class.selected]="location === selectedLocation" 
+              (click)="selectLocation(location)">
+            {{ location }}
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <button type="button" (click)="addLocation()" [disabled]="!selectedLocation">Add &gt;&gt;</button>
+        <button type="button" (click)="removeLocation()" [disabled]="!selectedLocation">Remove &lt;&lt;</button>
+      </div>
+      <div class="col">
+        <label>Selected Locations:</label>
+        <ul>
+          <li *ngFor="let location of selectedLocations">{{ location }}</li>
+        </ul>
+      </div>
+    </div>
+  
+    <button type="submit" [disabled]="reactiveForm.invalid">Submit</button>
+  </form>
+  

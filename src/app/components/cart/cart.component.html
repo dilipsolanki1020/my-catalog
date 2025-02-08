@@ -22,7 +22,7 @@
                 <div class="card-body">
                   <h5 class="card-title">{{ item.name }} ({{ item.variant }})</h5>
                   <p class="card-text">Quantity:
-                    <input type="number" class="form-control form-control-sm" [(ngModel)]="item.quantity" (change)="updateQuantity(item.productId, item.variant, item.quantity)" min="1">
+                    <input type="number" class="form-control form-control-sm quantityInput" [(ngModel)]="item.quantity" (change)="updateQuantity(item.productId, item.variant, item.quantity)" min="1">
                   </p>
                   <button class="btn btn-danger btn-sm" (click)="removeItem(item.productId, item.variant)">Delete</button>
                 </div>

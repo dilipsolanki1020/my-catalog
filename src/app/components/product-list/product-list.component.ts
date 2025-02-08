@@ -28,7 +28,8 @@ export class ProductListComponent implements OnInit {
   products: Product[] = [];  // Store products here
   isLoading: boolean = true;  // Track loading state
   selectedVariant: string = '';  // For storing the selected variant
-
+  showToaster: boolean = true;
+  toasterMessage: string = '';
   constructor(private productService: ProductService, private cartService: CartService) {}
 
   ngOnInit(): void {
@@ -60,6 +61,31 @@ export class ProductListComponent implements OnInit {
         quantity,
         product.images[0]
       );
+      this.showToast('Product added to cart!');
     }
   }
+
+  showToast(message: string): void {
+    this.toasterMessage = message;
+    this.showToaster = true;
+    setTimeout(() => {
+      this.showToaster = false;
+    }, 3000);
+  }
 }
+
+
+
+
+// addToCart(product: Product, variant: string, quantity: number): void {
+//   if (quantity > 0 && product.selectedVariant) {
+//     this.cartService.addToCart(
+//       product.id,
+//       product.name,
+//       product.selectedVariant.name,
+//       quantity,
+//       product.images[0]
+//     );
+//     this.showToast('Product added to cart!');
+//   }
+// }

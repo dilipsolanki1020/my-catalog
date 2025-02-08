@@ -14,8 +14,8 @@
   <!-- Product List -->
   <div class="row g-3">
     <!-- Display 2 products per row on all screen sizes (mobile, tablet, desktop) -->
-    <div class="col-6" *ngFor="let product of products">
-      <div class="card h-100">
+    <div class="col-12" *ngFor="let product of products">
+      <div class="card ">
         <img [src]="product.images[0]" alt="Product Image" class="card-img-top" />
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ product.name }}</h5>
@@ -47,3 +47,4 @@
     </div>
   </div>
 </div>
+<!-- Toaster Notification -->
